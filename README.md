@@ -1,6 +1,6 @@
 # Twitter Clone
 
-I used react and css for the frontend and for the frontend I used firebase which saved me a lot of time and increased my efficiency.
+I used react and css for the frontend and firebase for the backend. This saved me a lot of time and increased my efficiency.
 
 
 ## What I got to learn -
