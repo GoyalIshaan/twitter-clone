@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import {Avatar, Button} from '@mui/material'
 import './TweetBox.css'
 import db from "../src/firebase.js";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState('');
@@ -15,7 +17,8 @@ function TweetBox() {
       verified:true,
       text:tweetMessage,
       image:tweetImage,
-      avatar:"https://i0.wp.com/nft-reality.com/wp-content/uploads/2021/10/virtual-reality-glasses-1.png"
+      avatar:"https://i0.wp.com/nft-reality.com/wp-content/uploads/2021/10/virtual-reality-glasses-1.png",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
   }
   return (
